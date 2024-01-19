@@ -1,4 +1,4 @@
-package com.devsuperior.bds03.entities;
+package com.devsuperior.bds04.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;

@@ -1,6 +1,6 @@
-package com.devsuperior.bds03.services;
+package com.devsuperior.bds04.services;
 
-import com.devsuperior.bds03.repositories.UserRepository;
+import com.devsuperior.bds04.repositories.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

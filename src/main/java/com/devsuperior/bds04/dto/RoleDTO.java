@@ -1,6 +1,6 @@
-package com.devsuperior.bds03.dto;
+package com.devsuperior.bds04.dto;
 
-import com.devsuperior.bds03.entities.Role;
+import com.devsuperior.bds04.entities.Role;
 
 import java.io.Serializable;
 

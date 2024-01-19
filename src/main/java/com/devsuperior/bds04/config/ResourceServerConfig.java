@@ -1,4 +1,4 @@
-package com.devsuperior.bds03.config;
+package com.devsuperior.bds04.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -31,9 +31,9 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 	
 	private static final String[] PUBLIC = { "/oauth/token", "/h2-console/**" };
 	
-	private static final String[] OPERATOR_GET = { "/employees/**", "/departments/**" };
-	
-	private static final String[] ADMIN = { "/employees/**", "/users/**" };
+	private static final String[] PUBLIC_GET = { "/events/**", "/cities/**" };
+	private static final String[] POST_EVENTS = { "/events/**" };
+
 
 	
 
@@ -52,7 +52,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 		
 		http.authorizeRequests()
 		.antMatchers(PUBLIC).permitAll()
-		.antMatchers(HttpMethod.GET, OPERATOR_GET).hasAnyRole("OPERATOR", "ADMIN")
+		.antMatchers(HttpMethod.GET, PUBLIC_GET).permitAll()
+		.antMatchers(HttpMethod.POST, POST_EVENTS).hasAnyRole("CLIENT", "ADMIN")
 		.anyRequest().hasAnyRole("ADMIN");
 		
 		http.cors().configurationSource(corsConfigurationSource());

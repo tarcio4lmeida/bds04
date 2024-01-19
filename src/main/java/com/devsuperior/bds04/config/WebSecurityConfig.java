@@ -1,4 +1,4 @@
-package com.devsuperior.bds03.config;
+package com.devsuperior.bds04.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
